@@ -7,10 +7,14 @@ import com.example.covac.data.DataClass
 import com.example.covac.network.RetrofitClient
 import com.example.covac.network.RetrofitService
 import kotlinx.android.synthetic.main.activity_main.*
+import okhttp3.MediaType
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
+import java.io.File
 
 class MainActivity : AppCompatActivity() {
 
@@ -87,4 +91,39 @@ class MainActivity : AppCompatActivity() {
 //            })
 //        }.run() //잊지 마세요!
     }
+
+//    fun testRetrofit(path : String){
+//
+//        //creating a file
+//        val file = File(path)
+//        var fileName = userData.user_Id.replace("@","").replace(".","")
+//        fileName = fileName+".png"
+//
+//
+//        var requestBody : RequestBody = RequestBody.create(MediaType.parse("image/*"),file)
+//        var body : MultipartBody.Part = MultipartBody.Part.createFormData("uploaded_file",fileName,requestBody)
+//
+//
+//
+//        //creating our api
+//
+//        var server = retrofit.create(retrofit_interface::class.java)
+//
+//        // 파일, 사용자 아이디, 파일이름
+//
+//        server.post_Porfile_Request(userData.user_Id,body).enqueue(object:Callback<String>{
+//            override fun onFailure(call: Call<String>, t: Throwable) {
+//                Log.d("레트로핏 결과1",t.message)
+//            }
+//
+//            override fun onResponse(call: Call<String>, response: Response<String>) {
+//                if (response?.isSuccessful) {
+//                    Toast.makeText(getApplicationContext(), "File Uploaded Successfully...", Toast.LENGTH_LONG).show();
+//                    Log.d("레트로핏 결과2",""+response?.body().toString())
+//                } else {
+//                    Toast.makeText(getApplicationContext(), "Some error occurred...", Toast.LENGTH_LONG).show();
+//                }
+//            }
+//        })
+//    }
 }
