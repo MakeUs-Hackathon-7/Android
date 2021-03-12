@@ -82,7 +82,7 @@ class TestActivity : AppCompatActivity() {
         Log.v("uri", uri.toString())
         Runnable {
 
-            val filePath: String = getRealPathFromURI(uri)
+            filePath = getRealPathFromURI(uri)
             Log.v("uri", filePath)
             val file = File(filePath)
             var fileName = "imagename"
@@ -92,7 +92,7 @@ class TestActivity : AppCompatActivity() {
             val requestBody: RequestBody = RequestBody.create(MediaType.parse("image/*"), file)
             val body: MultipartBody.Part =
                 MultipartBody.Part.createFormData("img", fileName, requestBody)
-            val email_: String = "abcd@gmail.com"
+            val email_: String = "abcde@gmail.com"
             val nickname_: String = "aaa"
             val password_: String = "aaa"
             val email = RequestBody.create(MediaType.parse("text/plain"), email_.toString())
@@ -156,7 +156,7 @@ class TestActivity : AppCompatActivity() {
         val requestBody: RequestBody = RequestBody.create(MediaType.parse("image/*"), file)
         val body: MultipartBody.Part =
             MultipartBody.Part.createFormData("img", fileName, requestBody)
-        val email_: String = "abcd@gmail.com"
+        val email_: String = "abcde@gmail.com"
         val nickname_: String = "aaa"
         val password_: String = "aaa"
         val email = RequestBody.create(MediaType.parse("text/plain"), email_.toString())

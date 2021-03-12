@@ -34,4 +34,10 @@
         <item name="colorControlNormal">@color/yellow</item>
         <item name="navigationIcon">@drawable/ic_arrow_back_yellow</item>
     </style>
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:editTextColor">#242424</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
 </resources>

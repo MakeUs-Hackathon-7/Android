@@ -1,4 +1,4 @@
-package com.example.covac.ui.login
+package com.example.covac.ui.initial
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,10 +6,10 @@ import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import com.example.covac.R
 
-class LoginActivity : AppCompatActivity() {
+class SetNicknameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_set_nickname)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -27,4 +27,6 @@ class LoginActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
 }
