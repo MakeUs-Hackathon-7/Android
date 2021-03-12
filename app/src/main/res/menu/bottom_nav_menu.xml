@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/SymptomFragment"
+        android:title="백신증상"
+        android:icon="@drawable/ic_local_hospital" />
+    <item
+        android:id="@+id/StatisticFragment"
+        android:title="백신통계"
+        android:icon="@drawable/ic_assessment"/>
+    <item
+        android:id="@+id/TalkFragment"
+        android:title="자유톡"
+        android:icon="@drawable/ic_forum"/>
+    <item
+        android:id="@+id/MyPageFragment"
+        android:title="마이페이지"
+        android:icon="@drawable/ic_portrait"/>
+</menu>

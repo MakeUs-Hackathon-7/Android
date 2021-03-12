@@ -1,7 +1,9 @@
 package com.example.covac.network
 
 import com.example.covac.data.DataClass
+import com.example.covac.data.NewDataClass
 import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -18,10 +20,26 @@ interface RetrofitService {
     @GET("/woof.json?ref=apilist.fun")
     fun getInfo() : Call<DataClass>
 
-    @POST("userProfile/setUserProfileImage.php/")
-    fun post_Porfile_Request(
-        @Part("userId") userId: String,
-        @Part imageFile : MultipartBody.Part): Call<String>
+    @Multipart
+    @POST("user")
+    fun registerUser(
+        @Part("email") email: RequestBody,
+        @Part("password") password: RequestBody,
+        @Part("nickname") nickname: RequestBody,
+        @Part img : MultipartBody.Part): Call<DataClass>
+
+    @POST("login")
+    @FormUrlEncoded
+    fun loginUser(
+        @Field("email") email : String,
+        @Field("password") password : String): Call<NewDataClass>
+
+
+    @Multipart
+    @POST("auth")
+    fun ocrAuth(
+        @Header("access-token") token: String,
+        @Part img : MultipartBody.Part): Call<DataClass>
 
 //    @Query("Type")Type:String,
 //    @Query("KEY")KEY:String,

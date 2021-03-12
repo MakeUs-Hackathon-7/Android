@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MyPageFragment">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanum_extra_bold"
+                android:text="마이페이지"
+                android:textAppearance="@style/toolbar_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageButton
+                android:id="@+id/close_button"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_brightness_low"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:src="@color/purple_200"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/edit_profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_invalid_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/nickname_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nanum_extra_bold"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="8sp"
+        android:text="비누"
+        android:textColor="#1f2933"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:barrierMargin="16dp"
+        app:constraint_referenced_ids="nickname_text, edit_profile_btn" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/first_const"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E0E6EE"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp"
+        app:layout_constraintTop_toBottomOf="@id/barrier">
+
+        <FrameLayout
+            android:id="@+id/first_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.widget.Button
+                android:id="@+id/first_info_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_white_btn"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:fontFamily="@font/nanum_extra_bold"
+                android:gravity="start|center_vertical"
+                android:lineSpacingExtra="6sp"
+                android:paddingStart="182dp"
+                android:paddingEnd="16dp"
+                android:text="확인서 및 정보 자세히 보기"
+                android:textColor="#616e7c"
+                android:textSize="10sp" />
+
+            <android.widget.Button
+                android:id="@+id/show_first_info"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_blue_btn"
+                android:fontFamily="@font/nanum_extra_bold"
+                android:lineSpacingExtra="4sp"
+                android:text="1차 접종 내역"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/second_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/first_frame">
+
+            <android.widget.Button
+                android:id="@+id/first_sypmtom"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_white_btn"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:fontFamily="@font/nanum_extra_bold"
+                android:gravity="start|center_vertical"
+                android:lineSpacingExtra="6sp"
+                android:paddingStart="182dp"
+                android:paddingEnd="16dp"
+                android:text="등록한 내 증상 자세히 보기"
+                android:textColor="#616e7c"
+                android:textSize="10sp" />
+
+            <android.widget.Button
+                android:id="@+id/show_first_symptom"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_blue_btn"
+                android:fontFamily="@font/nanum_extra_bold"
+                android:lineSpacingExtra="4sp"
+                android:text="1차 접종 증상"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#E0E6EE"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp"
+        app:layout_constraintTop_toBottomOf="@id/first_const">
+
+        <LinearLayout
+            android:id="@+id/second_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/second_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanum_extra_bold"
+                android:text="2차 코로나 19 예방접종 가능일"
+                android:textColor="#ff5916"
+                app:layout_constraintEnd_toStartOf="@+id/second_day_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/second_day_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/nanum_extra_bold"
+                android:text="2021년 7월 10일"
+                android:textColor="#52606d"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/second_text"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/third_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/second_info">
+
+            <android.widget.Button
+                android:id="@+id/second_info_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_white_btn"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:fontFamily="@font/nanum_extra_bold"
+                android:gravity="start|center_vertical"
+                android:lineSpacingExtra="6sp"
+                android:paddingStart="182dp"
+                android:paddingEnd="16dp"
+                android:text="확인서 및 정보 자세히 보기"
+                android:textColor="#616e7c"
+                android:textSize="10sp" />
+
+            <android.widget.Button
+                android:id="@+id/show_second_info"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_blue_btn"
+                android:fontFamily="@font/nanum_extra_bold"
+                android:lineSpacingExtra="4sp"
+                android:text="2차 접종 내역"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fourth_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/third_frame">
+
+            <android.widget.Button
+                android:id="@+id/second_sypmtom"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_white_btn"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:fontFamily="@font/nanum_extra_bold"
+                android:gravity="start|center_vertical"
+                android:lineSpacingExtra="6sp"
+                android:paddingStart="182dp"
+                android:paddingEnd="16dp"
+                android:text="등록한 내 증상 자세히 보기"
+                android:textColor="#616e7c"
+                android:textSize="10sp" />
+
+            <android.widget.Button
+                android:id="@+id/show_second_symptom"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_blue_btn"
+                android:fontFamily="@font/nanum_extra_bold"
+                android:lineSpacingExtra="4sp"
+                android:text="2차 접종 증상"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <android.widget.Button
+        android:id="@+id/free_talk_text"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_rectangle_67"
+        android:drawableLeft="@drawable/ic_mode"
+        android:text="자유톡"
+        android:paddingLeft="44dp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/nanum_extra_bold"
+        android:textSize="12sp"
+        android:textColor="#ffffff"
+        android:lineSpacingExtra="4sp"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

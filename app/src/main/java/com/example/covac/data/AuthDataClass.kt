@@ -3,20 +3,10 @@ package com.example.covac.data
 /**
  * @author Taeeun Kim
  * @email xodms8713@gmail.com
- * @created 2021-03-11
+ * @created 2021-03-12
  */
-data class DataClass(
+data class AuthDataDataClass(
     val isSuccess: Boolean,
     val code: Int,
     val message: String
 )
-
-
-
-
-
-
-
-//data class UserClass(
-//
-//)

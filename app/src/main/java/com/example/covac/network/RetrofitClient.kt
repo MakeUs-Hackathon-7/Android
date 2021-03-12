@@ -1,8 +1,10 @@
 package com.example.covac.network
 
 import com.google.gson.GsonBuilder
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
 /**
  * @author Taeeun Kim
@@ -15,9 +17,18 @@ object RetrofitClient {
     private val gson = GsonBuilder().setLenient().create()
 
     // 서버 주소
-    private const val BASE_URL = "https://random.dog"
+    private const val BASE_URL = "https://goback.rigingprogrammertest.site"
 
     // SingleTon
+
+    private fun okClient(): OkHttpClient {
+        return OkHttpClient.Builder()
+            .connectTimeout(1, TimeUnit.MINUTES)
+            .writeTimeout(1, TimeUnit.MINUTES)
+            .readTimeout(1, TimeUnit.MINUTES)
+            .build()
+    }
+
     fun getInstance(): Retrofit {
         if (instance == null) {
             instance = Retrofit.Builder()
@@ -28,4 +39,5 @@ object RetrofitClient {
 
         return instance!!
     }
+
 }
