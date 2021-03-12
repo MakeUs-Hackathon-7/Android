@@ -3,26 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/myPageFragment">
-
+    app:startDestination="@id/SymptomFragment">
     <fragment
-        android:id="@+id/myPageFragment"
-        android:name="com.example.covac.ui.MyPageFragment"
-        android:label="fragment_my_page"
-        tools:layout="@layout/fragment_my_page" />
-    <fragment
-        android:id="@+id/symptomFragment"
+        android:id="@+id/SymptomFragment"
         android:name="com.example.covac.ui.symptom.SymptomFragment"
         android:label="fragment_symptom"
         tools:layout="@layout/fragment_symptom" />
     <fragment
-        android:id="@+id/statisticFragment"
+        android:id="@+id/StatisticFragment"
         android:name="com.example.covac.ui.StatisticFragment"
         android:label="fragment_statistic"
         tools:layout="@layout/fragment_statistic" />
     <fragment
-        android:id="@+id/talkFragment"
-        android:name="com.example.covac.ui.TalkFragment"
+        android:id="@+id/TalkFragment"
+        android:name="com.example.covac.ui.talk.TalkFragment"
         android:label="fragment_talk"
         tools:layout="@layout/fragment_talk" />
+    <fragment
+        android:id="@+id/MyPageFragment"
+        android:name="com.example.covac.ui.MyPageFragment"
+        android:label="fragment_my_page"
+        tools:layout="@layout/fragment_my_page" />
 </navigation>

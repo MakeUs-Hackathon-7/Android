@@ -55,6 +55,7 @@
             android:lineSpacingExtra="6sp"
             android:paddingHorizontal="10dp"
             android:paddingTop="25dp"
+            android:clickable="false"
             android:text="발열이란 질병이나 질환에 따른 증상의 하나로 정상 체온인 36.5 ~ 37.5℃ 이상으로 체온이 올라가는 것을 의미합니다."
             android:textColor="#616e7c"
             android:textSize="10sp" />
@@ -94,6 +95,7 @@
             android:lineSpacingExtra="6sp"
             android:paddingHorizontal="10dp"
             android:paddingTop="25dp"
+            android:clickable="false"
             android:text="오한이란 흔히 몸이 춥고 떨리는 증상을 뜻하는데, 정확히는 고열을 동반하는 인체의 불수의적인 근육 수축을 지칭합니다."
             android:textColor="#616e7c"
             android:textSize="10sp" />
@@ -132,6 +134,7 @@
             android:gravity="start|center_vertical"
             android:lineSpacingExtra="6sp"
             android:paddingHorizontal="10dp"
+            android:clickable="false"
             android:text="구토란 위장 속의 내용물이 식도를 거쳐 입 밖으로 나오는 증상을 의미합니다."
             android:textColor="#616e7c"
             android:textSize="10sp" />
@@ -171,6 +174,7 @@
             android:lineSpacingExtra="6sp"
             android:paddingHorizontal="10dp"
             android:paddingTop="25dp"
+            android:clickable="false"
             android:text="두통이란 머리의 상부에서 일어나는 통증이나 고통을 말하는데 이러한 통증은 안면, 치아, 턱 및 목에 이르는 부위까지 전파되기도 합니다."
             android:textColor="#616e7c"
             android:textSize="10sp" />
@@ -215,6 +219,7 @@
             android:gravity="start|center_vertical"
             android:lineSpacingExtra="6sp"
             android:paddingHorizontal="10dp"
+            android:clickable="false"
             android:text="근육통이란 근육의 통증으로, 여러 질병과 장애에 의해 발생하는 증상입니다."
             android:textColor="#616e7c"
             android:textSize="10sp" />

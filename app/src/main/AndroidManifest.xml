@@ -15,22 +15,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.COvac">
-        <activity android:name=".ui.signup.AgreeActivity"></activity>
+        <activity android:name=".ui.talk.TalkDetailActivity"></activity>
+        <activity android:name=".ui.talk.UploadTalkActivity" />
+        <activity android:name=".ui.signup.AgreeActivity" />
         <activity android:name=".ui.signup.SignUpActivity" />
         <activity android:name=".ui.certificate.InduceCertificateActivity" />
         <activity android:name=".ui.initial.InduceSymptomActivity" />
         <activity android:name=".ui.signup.SetNicknameActivity" />
-        <activity android:name=".ui.initial.InitialActivity" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".ui.initial.InitialActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".ui.symptom.SymptomInfoActivity" />
         <activity android:name=".ui.login.LoginActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".TestActivity"/>
+        <activity android:name=".TestActivity" />
     </application>
 
 </manifest>
