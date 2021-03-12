@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f7fa"
+
+    android:paddingVertical="16dp"
+    tools:context=".ui.GetVacInfoFragment">
+
+
+    <TextView
+        android:id="@+id/age_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="생년월일 / 연령층"
+        android:textSize="14sp"
+        android:textColor="#2929cc"
+        android:layout_marginStart="16dp"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_extra_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/age_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1992년 10월 20일 / 20대"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:textSize="14sp"
+        android:textColor="#1f2933"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/age_title"/>
+
+
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#cbd2d9"
+        app:layout_constraintTop_toBottomOf="@+id/age_text" />
+
+
+    <TextView
+        android:id="@+id/disease_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="접종명 및 차수"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:textSize="14sp"
+        android:textColor="#2929cc"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_extra_bold"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+    <TextView
+        android:id="@+id/disease_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1992년 10월 20일 / 20대"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:textSize="14sp"
+        android:textColor="#1f2933"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/disease_name"/>
+
+
+    <View
+        android:id="@+id/horizontal_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#cbd2d9"
+        app:layout_constraintTop_toBottomOf="@+id/disease_name_text" />
+
+
+    <TextView
+        android:id="@+id/vac_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="접종일"
+        android:textSize="14sp"
+        android:textColor="#2929cc"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_extra_bold"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/vac_date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1992년 10월 20일 / 20대"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:textSize="14sp"
+        android:textColor="#1f2933"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vac_date"/>
+
+
+    <View
+        android:id="@+id/horizontal_line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#cbd2d9"
+        app:layout_constraintTop_toBottomOf="@+id/vac_date_text" />
+
+    <TextView
+        android:id="@+id/vac_org"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="접종기관명"
+        android:textSize="14sp"
+        android:textColor="#2929cc"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_extra_bold"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line3"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/vac_org_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="서울의료원"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:textSize="14sp"
+        android:textColor="#1f2933"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vac_org"/>
+
+
+    <View
+        android:id="@+id/horizontal_line4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#cbd2d9"
+        app:layout_constraintTop_toBottomOf="@+id/vac_org_text" />
+
+    <TextView
+        android:id="@+id/vac_second_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2차 코로나19 예방접종 가능일"
+        android:textSize="14sp"
+        android:textColor="#2929cc"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_extra_bold"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line4"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/vac_second_date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1992년 10월 20일 / 20대"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:textSize="14sp"
+        android:textColor="#1f2933"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vac_second_date"/>
+
+
+    <View
+        android:id="@+id/horizontal_line5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#cbd2d9"
+        app:layout_constraintTop_toBottomOf="@+id/vac_second_date_text" />
+
+    <TextView
+        android:id="@+id/region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="지역"
+        android:textSize="14sp"
+        android:textColor="#2929cc"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_extra_bold"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line5"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/region_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="서울"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:textSize="14sp"
+        android:textColor="#1f2933"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/region"/>
+
+
+    <View
+        android:id="@+id/horizontal_line6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#cbd2d9"
+        app:layout_constraintTop_toBottomOf="@+id/region_text" />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line6"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.widget.Button
+            android:id="@+id/email_login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="20dp"
+            android:text="등록하고 시작하기"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:lineSpacingExtra="10sp"
+            android:fontFamily="@font/nanum_extra_bold"
+            android:background="@drawable/ic_login_btn"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="최초등록 이후, 마이페이지에서 수정할 수 있습니다."
+            android:layout_marginTop="16dp"
+            android:textSize="12sp"
+            android:textColor="#1f2933"
+            android:lineSpacingExtra="4sp"
+            android:fontFamily="@font/nanum_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_login_btn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
