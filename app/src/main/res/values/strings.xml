@@ -6,4 +6,9 @@
     <string name="select_certificate">확인서 선택하기</string>
     <string name="select_picture">사진 선택하기</string>
     <string name="complete">완료하기</string>
+    <string name="upload_picture">사진 업로드</string>
+    <string name="cancle">취소</string>
+    <string name="take_picture">사진 촬영</string>
+    <string name="select_gallery">갤러리 선택</string>
+
 </resources>

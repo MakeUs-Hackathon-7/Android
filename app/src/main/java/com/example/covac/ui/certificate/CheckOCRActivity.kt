@@ -1,19 +1,27 @@
-package com.example.covac.ui.login
+package com.example.covac.ui.certificate
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
-import com.example.covac.MainActivity
 import com.example.covac.R
-import com.example.covac.ui.certificate.InduceCertificateActivity
-import kotlinx.android.synthetic.main.activity_login.*
+import com.example.covac.adapter.CertificaterViewPagerAdapter
+import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.activity_check_o_c_r.*
 
-class LoginActivity : AppCompatActivity() {
+class CheckOCRActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_check_o_c_r)
+
+        viewPager.adapter =
+            CertificaterViewPagerAdapter(this)
+        val tabLayoutTextArray = arrayOf("접종 내역 정보","내역 확인서")
+        TabLayoutMediator(tabLayout,viewPager){tab,position->
+            tab.text = tabLayoutTextArray[position]
+
+        }.attach()
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -21,15 +29,12 @@ class LoginActivity : AppCompatActivity() {
         ab.setDisplayShowTitleEnabled(false)
         ab.setDisplayHomeAsUpEnabled(true)
 
-        login_btn.setOnClickListener{
-            startActivity(Intent(this, InduceCertificateActivity::class.java))
-        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
-                startActivity(Intent(this, MainActivity::class.java))
+                finish()
                 return true
             }
         }
