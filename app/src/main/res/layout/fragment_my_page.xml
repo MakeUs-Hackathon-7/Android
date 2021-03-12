@@ -320,7 +320,7 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="16dp"
         android:text="Button"
-        app:layout_constraintStart_toEndOf=""
+        app:layout_constraintStart_toEndOf="@+id/free_talk_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
