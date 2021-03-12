@@ -50,6 +50,11 @@ class TestActivity : AppCompatActivity() {
             Log.v("click", "clicked")
 
             TedImagePicker.with(this)
+                .title(R.string.select_picture)
+                .backButton(R.drawable.ic_arrow_back)
+                .buttonText(R.string.complete)
+                .buttonBackground(R.drawable.rec_tranparent)
+                .buttonTextColor(R.color.black)
                 .showCameraTile(false)
                 .start { uri -> showSingleImage(uri) }
 //            retrofitFun()

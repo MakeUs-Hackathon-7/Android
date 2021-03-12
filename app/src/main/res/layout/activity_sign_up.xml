@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.signup.SignUpActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/toolbar_theme_back"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이메일로 회원가입"
+        android:textSize="20sp"
+        android:textColor="#1f2933"
+        android:lineSpacingExtra="4sp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/nanum_extra_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/email_address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이메일"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:textSize="14sp"
+        android:textColor="#2929cc"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"/>
+
+    <!--    <SearchView-->
+    <!--        android:id="@+id/email_address_et"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:queryHint="abc@gmail.com"-->
+    <!--        android:searchIcon="@null"-->
+    <!--        android:iconifiedByDefault="false"-->
+    <!--        android:closeIcon="@drawable/ic_check"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        app:theme="@style/SearchViewStyle"-->
+    <!--        android:lineSpacingExtra="6sp"-->
+    <!--        android:queryBackground="@android:color/transparent"-->
+    <!--        android:background="@drawable/round_rectangle_8_with_border"-->
+    <!--        android:layout_marginHorizontal="16dp"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/email_address_text"-->
+    <!--        tools:targetApi="lollipop_mr1" />-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_address_textfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        app:endIconDrawable="@drawable/ic_check"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor= "@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@+id/email_address_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:textSize="14sp"
+        android:textColor="#2929cc"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_address_textfield" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_textfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        app:endIconDrawable="@drawable/ic_check"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor= "@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@+id/password_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/password_check_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 확인"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:textSize="14sp"
+        android:textColor="#2929cc"
+        android:lineSpacingExtra="10sp"
+        android:fontFamily="@font/nanum_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_textfield" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_check_textfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        app:endIconDrawable="@drawable/ic_check"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor= "@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@+id/password_check_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <android.widget.Button
+        android:id="@+id/signup_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:lineSpacingExtra="10sp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/nanum_extra_bold"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/ic_login_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_check_textfield" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
