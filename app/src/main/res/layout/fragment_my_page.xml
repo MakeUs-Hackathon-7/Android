@@ -301,9 +301,9 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/ic_rectangle_67"
         android:drawableLeft="@drawable/ic_mode"
-        android:text="자유톡"
-        android:paddingLeft="44dp"
-        android:gravity="center_horizontal"
+        android:text="     자유톡"
+        android:paddingLeft="30dp"
+        android:gravity="left|center_vertical"
         android:fontFamily="@font/nanum_extra_bold"
         android:textSize="12sp"
         android:textColor="#ffffff"
@@ -313,16 +313,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="16dp"
-        android:text="Button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:text="내가 쓴 Talk 보기"
+        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+        android:drawableTint="@color/white"
+        android:background="#616e7c"
+        android:textSize="12sp"
+        android:textColor="#ffffff"
+        android:lineSpacingExtra="4sp"
+        android:paddingEnd="32dp"
+        android:fontFamily="@font/nanum_extra_bold"
         app:layout_constraintStart_toEndOf="@+id/free_talk_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

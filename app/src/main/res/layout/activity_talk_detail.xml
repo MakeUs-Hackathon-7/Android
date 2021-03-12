@@ -40,13 +40,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:paddingVertical="16dp"
+        android:paddingTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/user_image"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_marginStart="16dp"
             android:src="@color/purple_200"
             app:civ_border_color="#FF000000"
@@ -131,6 +131,64 @@
             android:layout_marginTop="16dp"
             android:background="#e4e7eb"
             app:layout_constraintTop_toBottomOf="@+id/barrier" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="150dp"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_line"
+            app:layoutManager="LinearLayoutManager" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#e4e7eb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/my_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:src="@color/purple_200"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        <EditText
+            android:id="@+id/new_comment_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_text_box"
+            android:backgroundTint="#f0f0f0"
+            android:ems="10"
+            android:hint="댓글 달고 소통하기"
+            android:textStyle="normal"
+            android:textSize="10sp"
+            android:textColor="#1f2933"
+            android:lineSpacingExtra="6sp"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/my_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
