@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.symptom.SymptomInfoActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/main_blue"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/toolbar_theme_back_yellow">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COVID-19 백신 예방접종 후 증상안내"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:lineSpacingExtra="10sp"
+            android:fontFamily="@font/nanum_extra_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <FrameLayout
+        android:id="@+id/first_frame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/second_frame">
+
+        <android.widget.Button
+            android:id="@+id/first_info_btn"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/ic_bg_box"
+            android:fontFamily="@font/nanum_extra_bold"
+            android:gravity="start|center_vertical"
+            android:lineSpacingExtra="6sp"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="25dp"
+            android:text="발열이란 질병이나 질환에 따른 증상의 하나로 정상 체온인 36.5 ~ 37.5℃ 이상으로 체온이 올라가는 것을 의미합니다."
+            android:textColor="#616e7c"
+            android:textSize="10sp" />
+
+        <android.widget.Button
+            android:id="@+id/show_first_info"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_color_box_orange"
+            android:fontFamily="@font/nanum_extra_bold"
+            android:lineSpacingExtra="4sp"
+            android:text="발열"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/second_frame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/first_frame">
+
+        <android.widget.Button
+            android:id="@+id/second_info_btn"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/ic_bg_box"
+            android:fontFamily="@font/nanum_extra_bold"
+            android:gravity="start|center_vertical"
+            android:lineSpacingExtra="6sp"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="25dp"
+            android:text="오한이란 흔히 몸이 춥고 떨리는 증상을 뜻하는데, 정확히는 고열을 동반하는 인체의 불수의적인 근육 수축을 지칭합니다."
+            android:textColor="#616e7c"
+            android:textSize="10sp" />
+
+        <android.widget.Button
+            android:id="@+id/show_second_info"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_color_box_blue"
+            android:fontFamily="@font/nanum_extra_bold"
+            android:lineSpacingExtra="4sp"
+            android:text="오한"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/third_frame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/second_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fourth_frame">
+
+        <android.widget.Button
+            android:id="@+id/first_third_btn"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/ic_bg_box"
+            android:fontFamily="@font/nanum_extra_bold"
+            android:gravity="start|center_vertical"
+            android:lineSpacingExtra="6sp"
+            android:paddingHorizontal="10dp"
+            android:text="구토란 위장 속의 내용물이 식도를 거쳐 입 밖으로 나오는 증상을 의미합니다."
+            android:textColor="#616e7c"
+            android:textSize="10sp" />
+
+        <android.widget.Button
+            android:id="@+id/show_third_info"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_color_box_yellow"
+            android:fontFamily="@font/nanum_extra_bold"
+            android:lineSpacingExtra="4sp"
+            android:text="구토"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fourth_frame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/second_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/third_frame">
+
+        <android.widget.Button
+            android:id="@+id/fourth_info_btn"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/ic_bg_box"
+            android:fontFamily="@font/nanum_extra_bold"
+            android:gravity="start|center_vertical"
+            android:lineSpacingExtra="6sp"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="25dp"
+            android:text="두통이란 머리의 상부에서 일어나는 통증이나 고통을 말하는데 이러한 통증은 안면, 치아, 턱 및 목에 이르는 부위까지 전파되기도 합니다."
+            android:textColor="#616e7c"
+            android:textSize="10sp" />
+
+        <android.widget.Button
+            android:id="@+id/show_fourth_info"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_color_box_gray"
+            android:fontFamily="@font/nanum_extra_bold"
+            android:lineSpacingExtra="4sp"
+            android:text="오한"
+            android:textColor="#6677cc"
+            android:textSize="12sp" />
+
+    </FrameLayout>
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="first_frame, third_frame"/>
+
+    <FrameLayout
+        android:id="@+id/fifth_frame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/third_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/barrier">
+
+        <android.widget.Button
+            android:id="@+id/fifth_info_btn"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/ic_bg_box"
+            android:fontFamily="@font/nanum_extra_bold"
+            android:gravity="start|center_vertical"
+            android:lineSpacingExtra="6sp"
+            android:paddingHorizontal="10dp"
+            android:text="근육통이란 근육의 통증으로, 여러 질병과 장애에 의해 발생하는 증상입니다."
+            android:textColor="#616e7c"
+            android:textSize="10sp" />
+
+        <android.widget.Button
+            android:id="@+id/show_fifth_info"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_color_box_darkgray"
+            android:fontFamily="@font/nanum_extra_bold"
+            android:lineSpacingExtra="4sp"
+            android:text="근육통"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+    </FrameLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

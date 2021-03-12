@@ -1,4 +1,4 @@
-package com.example.covac.ui
+package com.example.covac.ui.symptom
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

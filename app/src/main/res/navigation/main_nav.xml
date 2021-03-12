@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_my_page" />
     <fragment
         android:id="@+id/symptomFragment"
-        android:name="com.example.covac.ui.SymptomFragment"
+        android:name="com.example.covac.ui.symptom.SymptomFragment"
         android:label="fragment_symptom"
         tools:layout="@layout/fragment_symptom" />
     <fragment
