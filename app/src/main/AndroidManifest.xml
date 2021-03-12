@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.COvac">
-        <activity android:name=".ui.initial.InduceSymptomActivity"></activity>
+        <activity android:name=".ui.certificate.InduceCertificateActivity"></activity>
+        <activity android:name=".ui.initial.InduceSymptomActivity" />
         <activity android:name=".ui.initial.SetNicknameActivity" />
         <activity android:name=".ui.initial.InitialActivity" />
         <activity android:name=".ui.symptom.SymptomInfoActivity" />

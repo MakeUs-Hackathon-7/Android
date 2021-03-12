@@ -40,4 +40,9 @@
         <item name="android:textSize">14sp</item>
         <item name="android:lineSpacingExtra">6sp</item>
     </style>
+
+    <style name="toolbar_theme_close" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@android:color/black</item>
+        <item name="navigationIcon">@drawable/ic_baseline_close_24</item>
+    </style>
 </resources>
