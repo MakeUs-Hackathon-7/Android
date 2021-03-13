@@ -2,11 +2,11 @@ package com.example.covac.ui.symptom
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.covac.R
 import com.example.covac.adapter.SymptomAdapter
@@ -54,6 +54,10 @@ class SymptomFragment : Fragment() {
 
         new_post_btn.setOnClickListener {
             startActivity(Intent(context, RegisterSymptomActivity::class.java))
+        }
+
+        st_button.setOnClickListener {
+            startActivity(Intent(context, SetFilterActivity::class.java))
         }
 
 

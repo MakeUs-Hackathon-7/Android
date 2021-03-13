@@ -11,7 +11,7 @@
         tools:layout="@layout/fragment_symptom" />
     <fragment
         android:id="@+id/StatisticFragment"
-        android:name="com.example.covac.ui.StatisticFragment"
+        android:name="com.example.covac.ui.statistic.StatisticFragment"
         android:label="fragment_statistic"
         tools:layout="@layout/fragment_statistic" />
     <fragment

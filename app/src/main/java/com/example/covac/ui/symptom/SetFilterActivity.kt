@@ -7,6 +7,7 @@ import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import com.example.covac.R
 import com.example.covac.ui.initial.InduceSymptomActivity
+import kotlinx.android.synthetic.main.activity_set_filter.*
 
 class SetFilterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,13 +19,17 @@ class SetFilterActivity : AppCompatActivity() {
         val ab = supportActionBar!!
         ab.setDisplayShowTitleEnabled(false)
         ab.setDisplayHomeAsUpEnabled(true)
+
+        complete_btn.setOnClickListener {
+            finish()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
 //                startActivity(Intent(this, MainActivity::class.java))
-                startActivity(Intent(this, InduceSymptomActivity::class.java))
+                finish()
                 return true
             }
         }

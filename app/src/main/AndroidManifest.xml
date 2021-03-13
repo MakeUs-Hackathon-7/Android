@@ -15,13 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.COvac">
-        <activity android:name=".ui.symptom.SetFilterActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".ui.symptom.SetFilterActivity"/>
         <activity android:name=".ui.symptom.RegisterSymptomActivity" />
         <activity android:name=".ui.mypage.MySymptomActivity" />
         <activity android:name=".ui.mypage.MyVacHistoryActivity" />
@@ -34,7 +28,13 @@
         <activity android:name=".ui.certificate.InduceCertificateActivity" />
         <activity android:name=".ui.initial.InduceSymptomActivity" />
         <activity android:name=".ui.signup.SetNicknameActivity" />
-        <activity android:name=".ui.initial.InitialActivity"/>
+        <activity android:name=".ui.initial.InitialActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".ui.symptom.SymptomInfoActivity" />
         <activity android:name=".ui.login.LoginActivity" />
         <activity android:name=".MainActivity" />

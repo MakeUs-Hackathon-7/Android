@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f5f7fa"
-    tools:context=".ui.symptom.SymptomFragment">
+    tools:context=".ui.statistic.StatisticFragment">
 
 
     <androidx.appcompat.widget.Toolbar
@@ -49,4 +49,15 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@color/main_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
