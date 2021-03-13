@@ -7,8 +7,8 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.covac.data.DataClass
-import com.example.covac.data.NewDataClass
+import com.example.covac.data.retrofit.DataClass
+import com.example.covac.data.retrofit.NewDataClass
 import com.example.covac.network.RetrofitClient
 import com.example.covac.network.RetrofitService
 import gun0912.tedimagepicker.builder.TedImagePicker

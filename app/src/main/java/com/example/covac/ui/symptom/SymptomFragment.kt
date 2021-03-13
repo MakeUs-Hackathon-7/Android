@@ -6,7 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.covac.R
+import com.example.covac.adapter.SymptomAdapter
+import com.example.covac.data.Symptom
 import com.example.covac.ui.login.LoginActivity
 import kotlinx.android.synthetic.main.fragment_symptom.*
 
@@ -47,6 +51,33 @@ class SymptomFragment : Fragment() {
         symptom_layout.setOnClickListener{
             startActivity(Intent(context, SymptomInfoActivity::class.java))
         }
+
+        new_post_btn.setOnClickListener {
+            startActivity(Intent(context, RegisterSymptomActivity::class.java))
+        }
+
+
+        val symptomList = arrayListOf<Symptom>()
+        symptomList.add(Symptom("비누", "아스카라제네카", "20대", "서울"
+        ,"2020-01-01", "당일과 다음날은 무조건 쉬어야 할것 같네요.", false, true, false, true, true))
+
+        symptomList.add(Symptom("이고백", "화이자", "50대", "경기"
+            ,"2020-01-03", "온몸에 몸살이나서 주말동안 아무것도 못했습니다ㅠㅠ", true, false, false, false, true))
+
+
+        symptomList.add(Symptom("태은", "화이자", "20대", "서울"
+            ,"2021-01-05", "울렁거리는 느낌이 들었습니다.", false, true, true, false, false))
+
+
+        recycler_view.apply{
+            layoutManager = LinearLayoutManager(context)
+            adapter =
+                SymptomAdapter(symptomList) { symptom ->
+                    Toast.makeText(context, "$symptom", Toast.LENGTH_SHORT).show()
+                }
+        }
+
+
     }
 
 }

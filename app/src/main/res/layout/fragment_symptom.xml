@@ -141,6 +141,16 @@
         app:layout_constraintTop_toBottomOf="@+id/symptom_layout" />
 
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line" />
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/new_post_btn"
         android:layout_width="56dp"

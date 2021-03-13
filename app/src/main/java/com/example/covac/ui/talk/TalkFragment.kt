@@ -43,7 +43,7 @@ class TalkFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        new_post_btn.setOnClickListener {
+        new_talk_btn.setOnClickListener {
             startActivity(Intent(context, UploadTalkActivity::class.java))
         }
     }

@@ -1,14 +1,14 @@
-package com.example.covac.ui.talk
+package com.example.covac.ui.symptom
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.covac.R
 import kotlinx.android.synthetic.main.activity_upload_talk.*
 
-class UploadTalkActivity : AppCompatActivity() {
+class RegisterSymptomActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_upload_talk)
+        setContentView(R.layout.activity_register_symptom)
 
         cancle_btn.setOnClickListener{
             finish()

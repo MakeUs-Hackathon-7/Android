@@ -1,7 +1,7 @@
 package com.example.covac.network
 
-import com.example.covac.data.DataClass
-import com.example.covac.data.NewDataClass
+import com.example.covac.data.retrofit.DataClass
+import com.example.covac.data.retrofit.NewDataClass
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call

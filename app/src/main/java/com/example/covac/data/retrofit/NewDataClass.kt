@@ -1,4 +1,4 @@
-package com.example.covac.data
+package com.example.covac.data.retrofit
 
 /**
  * @author Taeeun Kim

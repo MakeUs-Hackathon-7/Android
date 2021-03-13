@@ -8,19 +8,16 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.view.MenuItem
-import android.widget.ImageView
-import android.widget.LinearLayout
 import androidx.appcompat.widget.Toolbar
 import com.afollestad.materialdialogs.MaterialDialog
-import com.example.covac.MainActivity
 import com.example.covac.R
 import com.example.covac.TestActivity
-import com.example.covac.data.DataClass
+import com.example.covac.data.retrofit.DataClass
 import com.example.covac.network.RetrofitClient
 import com.example.covac.network.RetrofitService
+import com.example.covac.ui.initial.InduceSymptomActivity
 import gun0912.tedimagepicker.builder.TedImagePicker
 import kotlinx.android.synthetic.main.activity_induce_certificate.*
-import kotlinx.android.synthetic.main.activity_set_nickname.*
 import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -166,7 +163,7 @@ class InduceCertificateActivity : AppCompatActivity() {
         when (item.itemId) {
             android.R.id.home -> {
 //                startActivity(Intent(this, MainActivity::class.java))
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, InduceSymptomActivity::class.java))
                 return true
             }
         }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MyPageFragment">
+    tools:context=".ui.mypage.MyPageFragment">
 
 
     <androidx.appcompat.widget.Toolbar
@@ -123,6 +123,7 @@
                 android:lineSpacingExtra="6sp"
                 android:paddingStart="182dp"
                 android:paddingEnd="16dp"
+                android:clickable="false"
                 android:text="확인서 및 정보 자세히 보기"
                 android:textColor="#616e7c"
                 android:textSize="10sp" />
@@ -159,6 +160,7 @@
                 android:lineSpacingExtra="6sp"
                 android:paddingStart="182dp"
                 android:paddingEnd="16dp"
+                android:clickable="false"
                 android:text="등록한 내 증상 자세히 보기"
                 android:textColor="#616e7c"
                 android:textSize="10sp" />
@@ -241,6 +243,7 @@
                 android:lineSpacingExtra="6sp"
                 android:paddingStart="182dp"
                 android:paddingEnd="16dp"
+                android:clickable="false"
                 android:text="확인서 및 정보 자세히 보기"
                 android:textColor="#616e7c"
                 android:textSize="10sp" />
@@ -277,6 +280,7 @@
                 android:lineSpacingExtra="6sp"
                 android:paddingStart="182dp"
                 android:paddingEnd="16dp"
+                android:clickable="false"
                 android:text="등록한 내 증상 자세히 보기"
                 android:textColor="#616e7c"
                 android:textSize="10sp" />
@@ -308,13 +312,13 @@
         android:textSize="12sp"
         android:textColor="#ffffff"
         android:lineSpacingExtra="4sp"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintEnd_toStartOf="@+id/my_talk_btn"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <android.widget.Button
-        android:id="@+id/button5"
+        android:id="@+id/my_talk_btn"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"

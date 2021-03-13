@@ -39,7 +39,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="자유톡 올리기"
-                android:textColor="#9aa5b1"
+                android:textColor="#2929cc"
+                android:lineSpacingExtra="10sp"
                 android:fontFamily="@font/nanum_extra_bold"
                 android:textAppearance="@style/toolbar_title"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -54,11 +55,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="자유롭게 글을 남겨보세요."
-
         android:layout_margin="16dp"
         app:counterEnabled="true"
         app:counterMaxLength="280"
-        app:boxStrokeColor="@null"
+        app:boxStrokeColor="@android:color/transparent"
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <com.google.android.material.textfield.TextInputEditText

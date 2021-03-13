@@ -1,29 +1,22 @@
 package com.example.covac.ui.login
 
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
-import com.example.covac.MainActivity
 import com.example.covac.R
 import com.example.covac.TestActivity
-import com.example.covac.data.DataClass
-import com.example.covac.data.NewDataClass
+import com.example.covac.data.retrofit.NewDataClass
 import com.example.covac.network.RetrofitClient
 import com.example.covac.network.RetrofitService
 import com.example.covac.ui.certificate.InduceCertificateActivity
 import kotlinx.android.synthetic.main.activity_login.*
-import okhttp3.MediaType
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
-import java.io.File
 
 class LoginActivity : AppCompatActivity() {
 
