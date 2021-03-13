@@ -1,10 +1,12 @@
 package com.example.covac.ui.login
 
+import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.covac.R
 import com.example.covac.TestActivity
@@ -12,11 +14,13 @@ import com.example.covac.data.retrofit.NewDataClass
 import com.example.covac.network.RetrofitClient
 import com.example.covac.network.RetrofitService
 import com.example.covac.ui.certificate.InduceCertificateActivity
+import com.google.android.material.internal.ContextUtils.getActivity
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -79,16 +83,22 @@ class LoginActivity : AppCompatActivity() {
                     val message: String = response.body()?.message ?: "no message"
                     token_=response.body()?.result?.token ?: "no token"
 
+
+
                     Log.v("success", isSuccess.toString())
                     Log.v("code", code.toString())
                     Log.v("message", message)
                     Log.v("token", token_)
                     Log.d(TAG, "response : ${response.raw().request().url().url()}")
 
-//                    if(code == 200){
-//                        toNextPage()
-//                    }
-                    toNextPage()
+                    if(code == 200){
+
+
+                        val preferences: SharedPreferences = this@LoginActivity.getSharedPreferences("covac", Context.MODE_PRIVATE)
+                        preferences.edit().putString("TOKEN", token_).apply()
+                        toNextPage()
+                    }
+//                    toNextPage()
                 }
             })
 
@@ -103,6 +113,11 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun toNextPage() {
-        startActivity(Intent(this, InduceCertificateActivity::class.java))
+
+//        nextIntent.putExtra("email", email_et.text.toString())
+//        nextIntent.putExtra("password", password_et.text.toString())
+        val nextIntent = Intent(this, InduceCertificateActivity::class.java)
+        startActivity(nextIntent)
+
     }
 }

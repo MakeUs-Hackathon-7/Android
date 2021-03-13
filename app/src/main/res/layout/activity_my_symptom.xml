@@ -33,4 +33,129 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.appcompat.widget.Toolbar>
 
+
+    <TextView
+        android:id="@+id/vac_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/nanum_extra_bold"
+        android:lineSpacingExtra="6sp"
+        android:text="아스트라제네카"
+        android:textColor="#9aa5b1"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/mid_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/nanum_extra_bold"
+        android:text="·"
+        android:textColor="#ffbd3e"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/vac_name"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/user_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/nanum_extra_bold"
+        android:lineSpacingExtra="6sp"
+        android:text="10대"
+        android:textColor="#9aa5b1"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/mid_1"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/mid_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/nanum_extra_bold"
+        android:text="·"
+        android:textColor="#ffbd3e"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/user_age"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/user_region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/nanum_extra_bold"
+        android:lineSpacingExtra="6sp"
+        android:text="서울"
+        android:textColor="#9aa5b1"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/mid_2"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/mid_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/nanum_extra_bold"
+        android:text="·"
+        android:textColor="#ffbd3e"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/user_region"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+
+    <TextView
+        android:id="@+id/vac_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/nanum_extra_bold"
+        android:lineSpacingExtra="6sp"
+        android:text="21/03/12"
+        android:textColor="#9aa5b1"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/mid_3"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_mysymp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/vac_name" />
+
+
+    <android.widget.Button
+        android:id="@+id/add_symp_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내 증상 추가하기"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:lineSpacingExtra="10sp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/nanum_extra_bold"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/ic_login_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view_mysymp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

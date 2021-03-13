@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mysymp"
+            type="com.example.covac.data.MySymp" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nested_const"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f7fa"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            app:layout_constraintTop_toTopOf="parent" >
+
+
+            <LinearLayout
+                android:id="@+id/tag_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/symptom_1"
+                    android:layout_width="55dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/symptom_1" />
+
+                <ImageView
+                    android:id="@+id/symptom_2"
+                    android:layout_width="55dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/symptom_2" />
+
+                <ImageView
+                    android:id="@+id/symptom_3"
+                    android:layout_width="55dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/symptom_3" />
+
+                <ImageView
+                    android:id="@+id/symptom_4"
+                    android:layout_width="55dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/symptom_4" />
+
+                <ImageView
+                    android:id="@+id/symptom_5"
+                    android:layout_width="55dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/symptom_5" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{mysymp.content}"
+                android:background="@drawable/round_rectangle_8"
+                android:backgroundTint="#ffffff"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="10sp"
+                android:textColor="#1f2933"
+                android:lineSpacingExtra="6sp"
+                android:fontFamily="@font/nanum_regular"
+                app:layout_constraintTop_toBottomOf="@id/tag_layout"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4e7eb"
+            app:layout_constraintTop_toBottomOf="@+id/nested_const" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

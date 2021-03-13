@@ -116,6 +116,7 @@
                 android:id="@+id/first_info_btn"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+
                 android:background="@drawable/ic_white_btn"
                 android:drawableEnd="@drawable/ic_chevron_right"
                 android:fontFamily="@font/nanum_extra_bold"

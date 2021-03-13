@@ -111,6 +111,7 @@ class SetNicknameActivity : AppCompatActivity(), View.OnClickListener {
 
 
     private fun signUp() {
+        Log.v("signup", "signup")
         Runnable {
 
             nickname_ = nickname_et.text.toString()

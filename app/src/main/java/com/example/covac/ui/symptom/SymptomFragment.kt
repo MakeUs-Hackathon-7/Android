@@ -78,6 +78,8 @@ class SymptomFragment : Fragment() {
             adapter =
                 SymptomAdapter(symptomList) { symptom ->
                     Toast.makeText(context, "$symptom", Toast.LENGTH_SHORT).show()
+
+//                    startActivity(Intent(this, Symptom))
                 }
         }
 

@@ -14,6 +14,9 @@
         <!-- Customize your theme here. -->
 
         <item name="android:fontFamily">@font/nanum</item>
+        <item name="md_color_title">#4a4a4a</item>
+        <item name="md_color_button_text">#4a4a4a</item>
+        <item name="md_ripple_color">@color/main_blue</item>
     </style>
 
 

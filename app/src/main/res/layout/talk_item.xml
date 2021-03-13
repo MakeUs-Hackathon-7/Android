@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="talk"
+            type="com.example.covac.data.Talk" />
+    </data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
     android:background="@android:color/transparent"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -28,7 +38,7 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/nanum_extra_bold"
         android:letterSpacing="0.01"
-        android:text="이고백"
+        android:text="@{talk.nickname}"
         android:textSize="14sp"
         android:textColor="#1f2933"
         android:lineSpacingExtra="10sp"
@@ -44,7 +54,7 @@
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/nanum_regular"
         android:lineSpacingExtra="8sp"
-        android:text="3분전"
+        android:text="@{talk.date}"
         android:textColor="#9aa5b1"
         android:textSize="8sp"
         app:layout_constraintStart_toEndOf="@+id/user_nickname"
@@ -59,7 +69,7 @@
         android:layout_marginTop="6dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/nanum_extra_bold"
-        android:text="댓글 1개"
+        android:text="@{talk.comment_num}"
         android:textSize="8sp"
         android:textColor="#6677cc"
         android:lineSpacingExtra="8sp"
@@ -78,7 +88,7 @@
         android:fontFamily="@font/nanum_regular"
         android:lineSpacingExtra="6sp"
         android:padding="10dp"
-        android:text="백신 다들 언제쯤 맞으시나요?"
+        android:text="@{talk.content}"
         android:textColor="#1f2933"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,3 +96,4 @@
         app:layout_constraintTop_toBottomOf="@id/user_nickname" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

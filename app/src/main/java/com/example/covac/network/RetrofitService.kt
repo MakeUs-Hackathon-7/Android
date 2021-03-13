@@ -1,7 +1,6 @@
 package com.example.covac.network
 
-import com.example.covac.data.retrofit.DataClass
-import com.example.covac.data.retrofit.NewDataClass
+import com.example.covac.data.retrofit.*
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -35,11 +34,46 @@ interface RetrofitService {
         @Field("password") password : String): Call<NewDataClass>
 
 
+    //B1 -> ok
+    @POST("notice")
+    @FormUrlEncoded
+    fun uploadTalk(
+            @Header("access-token") token: String,
+            @Field("content") content : String): Call<DataClass>
+
+
+
+    //M1 ->
+    @GET("mypage")
+    fun myPage_auth(
+            @Header("access-token") token: String): Call<UserAuth>
+
+
+    //M2
+    @GET("/mypage/notice")
+    fun myPage_talk(
+            @Header("access-token") token: String): Call<UserTalk>
+
+
+    //S1
+    @GET("users")
+    fun getUserInfo_register_symptom(
+            @Header("access-token") token: String): Call<UserInfo>
+
+
     @Multipart
     @POST("auth")
     fun ocrAuth(
         @Header("access-token") token: String,
         @Part img : MultipartBody.Part): Call<DataClass>
+
+
+    @Multipart
+    @POST("word_extraction")
+    fun ocrdirect(
+            @Part("language") language: String,
+            @Part base_image : MultipartBody.Part): Call<DataClass>
+
 
 //    @Query("Type")Type:String,
 //    @Query("KEY")KEY:String,

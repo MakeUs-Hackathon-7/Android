@@ -1,12 +1,16 @@
 package com.example.covac.ui
 
+import android.net.Uri
 import android.os.Bundle
+import android.os.SystemClock.sleep
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.covac.R
 import kotlinx.android.synthetic.main.fragment_certificate.*
+import java.lang.Thread.sleep
+import java.sql.Time
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -43,5 +47,8 @@ class CertificateFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 //        gallery_btn
+
+        val uri: Uri = Uri.parse("content://media/external/images/media/27")
+        imageView.setImageURI(uri)
     }
 }

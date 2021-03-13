@@ -96,15 +96,18 @@ class TestActivity : AppCompatActivity() {
 
             val requestBody: RequestBody = RequestBody.create(MediaType.parse("image/*"), file)
             val body: MultipartBody.Part =
-                MultipartBody.Part.createFormData("img", fileName, requestBody)
+                MultipartBody.Part.createFormData("base_image", fileName, requestBody)
             val email_: String = "abcde@gmail.com"
             val nickname_: String = "aaa"
             val password_: String = "aaa"
             val email = RequestBody.create(MediaType.parse("text/plain"), email_.toString())
             val nickname = RequestBody.create(MediaType.parse("text/plain"), nickname_.toString())
             val password = RequestBody.create(MediaType.parse("text/plain"), password_.toString())
+            val language_: String = "ko"
+            val language = RequestBody.create(MediaType.parse("text/plain"), language_.toString())
+//
 
-            myAPI.registerUser(email, nickname, password, body).enqueue(object : Callback<DataClass> {
+            myAPI.ocrdirect(language_, body).enqueue(object : Callback<DataClass> {
                 override fun onFailure(call: Call<DataClass>, t: Throwable) {
                     t.printStackTrace()
                 }
@@ -119,30 +122,7 @@ class TestActivity : AppCompatActivity() {
                     Log.v("success", isSuccess.toString())
                     Log.v("code", code.toString())
                     Log.v("message", message)
-                    Log.d(TAG,"response : ${response.raw().request().url().url()}")
-                }
-            })
-
-            myAPI.loginUser(email_, nickname_).enqueue(object : Callback<NewDataClass> {
-                override fun onFailure(call: Call<NewDataClass>, t: Throwable) {
-                    t.printStackTrace()
-                }
-
-                override fun onResponse(call: Call<NewDataClass>, response: Response<NewDataClass>) {
-                    Log.v("success", response.code().toString())
-                    Log.v("success", response.body().toString())
-                    val isSuccess: Boolean = response.body()?.isSuccess ?: false
-                    val code: Int = response.body()?.code ?: 0
-                    val message: String = response.body()?.message ?: "no message"
-                    token_=response.body()?.result?.token ?: "no token"
-
-                    Log.v("success", isSuccess.toString())
-                    Log.v("code", code.toString())
-                    Log.v("message", message)
-                    Log.v("token", token_)
-                    Log.d(TAG, "response : ${response.raw().request().url().url()}")
-
-                    doOCR()
+                    Log.d(TAG,"response : ${response.raw().request().header("access-token")}")
                 }
             })
 
