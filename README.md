@@ -1,4 +1,4 @@
-# MakeUs Hackathon
+# MakeUs Hackathon: COVAC :syringe:
 
 
 ![해커톤_7팀_covac-01](https://user-images.githubusercontent.com/32799078/113430626-74d0d800-9415-11eb-8b21-48e756db00be.jpg)
